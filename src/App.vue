@@ -454,8 +454,9 @@ export default {
 }
 
 .tabscontent__words {
-	margin: 5px 5px 5px 5px;
-	color: #EFE0B9
+	margin: 5px 8px 5px 8px;
+	color: #EFE0B9;
+	font-size: 1.1em;
 }
 
 .tabscontent__header {

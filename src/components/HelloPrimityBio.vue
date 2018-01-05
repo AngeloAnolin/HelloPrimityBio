@@ -57,6 +57,7 @@
 					<div class="tabscontent__item" v-show="showWhyPrimity" :class="{ 'tabcontent-opaque': showWhyPrimity }">
 						<div class="box">
 							<h3 class="box__title">WhyPrimity</h3>
+							<br />
 							<p class="tabscontent__words">
 								Dealing one of the most challenging area in the realm of science and health care is always a noble endeavour. 
 								The way you've built your platform allowing for better method of drug testing and discovery in a controlled
@@ -78,6 +79,7 @@
 					<div class="tabscontent__item" v-show="showMyExperiences" :class="{ 'tabcontent-opaque': showMyExperiences }">
 						<div class="box">
 							<h3 class="box__title">My Experiences</h3>
+							<br />
 							<p class="tabscontent__words">
 								I've been involved in building and maintaining software for the past couple of years, spanning government and private corporations.
 							</p>
@@ -111,6 +113,7 @@
 					<div class="tabscontent__item" v-show="showInClosing" :class="{ 'tabcontent-opaque': showInClosing }">
 						<div class="box">
 							<h3 class="box__title">In Closing</h3>
+							<br />
 							<p class="tabscontent__words">
 								Caring about work that matters; Empowering your people to have a large impact in the present and the future of the company; Indepence and flexibility; 
 								these are but few of the things that makes a company stand out and be a dream destination for anybody wanting to make a difference. I have a feeling 
@@ -134,6 +137,9 @@
 								<li><a href="mailto: angelo.anolin@gmail.com">angelo.anolin@gmail.com</a></li>
 								<li><a href="tel: +1 780-953-8276">+1 780-953-8276</a></li>
 							</ul>
+							<p class="tabscontent__words">
+								P.S. This application was built using VueJS. Source code is in <a href="https://github.com/AngeloAnolin/HelloPrimityBio" target="_blank">Github</a>.
+							</p>
 						</div>
 					</div>
 					<button class="btn btn--back" @click="closeTabs" :class="{ 'back-button-opaque': showTabContent }">
@@ -147,8 +153,6 @@
 </template>
 
 <script>
-import anime from 'animejs'
-// import TabsNav from '@/assets/tabsnav.js'
 
 export default {
 	name: 'HelloPrimityBio',
@@ -169,38 +173,6 @@ export default {
 	},
 
 	methods: {
-		openTabCallback (anim, idx, tab) {
-			var a = this
-			if (anim.progress > 40 && !a.isContentShown) {
-				a.isContentShown = true
-				a.current = idx
-
-				var contentItem = a.contentItems[idx]
-				var content = contentItem.querySelector('.box')
-
-				// Hide the content elements.
-				content.style.opacity = 0
-
-				// Show content item.
-				contentItem.style.opacity = 1
-				contentItem.classList.add('tabscontent__item--current')
-
-				// Animate content elements in.
-				anime.remove(content)
-				anime({
-					targets: content,
-					easing: [0.2, 1, 0.3, 1],
-					duration: 600,
-					translateY: [400, 0],
-					opacity: {
-						value: 1,
-						duration: 600,
-						easing: 'linear'
-					}
-				})
-			}
-		},
-
 		closeTabs () {
 			var a = this
 			a.showTabs = true
@@ -238,43 +210,7 @@ export default {
 	},
 
 	mounted () {
-		// var a = this
-		// var tabNavOptions = {
-		// 	movable: 'all',
-		// 	layout: 'horizontal',
-		// 	animeduration: 600,
-		// 	animeeasing: [0.2, 1, 0.3, 1],
-		// 	animedelay: 50,
-		// 	onOpenBarsUpdate: a.openTabCallback,
-		// 	onOpenTab: function () {
-		// 		// Show the back button after the tab is open.
-		// 		anime({
-		// 			targets: a.backCtrl,
-		// 			duration: 600,
-		// 			easing: 'easeOutExpo',
-		// 			scale: [0, 1],
-		// 			opacity: {
-		// 				value: 1,
-		// 				duration: 300,
-		// 				easing: 'linear'
-		// 			}
-		// 		})
-		// 	}
-		// }
-
-		// var tabsNav = document.querySelector('nav.tabsnav')
-		// // console.log(tabsNav)
-		// // console.log(TabsNav)
-
-		// a.tnav = new TabsNav(tabsNav, tabNavOptions)
-
-		// console.log(a.tnav)
-
-		// // The content items and the back control.
-		// a.contentItems = [].slice.call(document.querySelectorAll('.tabscontent > .tabscontent__item'))
-		// a.backCtrl = document.querySelector('.tabscontent > button.btn--back')
-		// // menu ctrl for smaller screens (the tabs are not initially shown and toggling this button will show/hide the tabs)
-		// a.menuCtrl = document.querySelector('button.btn--menu')
+		// Mounted script here.
 	}
 }
 </script>
