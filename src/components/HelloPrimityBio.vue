@@ -38,7 +38,7 @@
 				<nav class="tabsnav tabsnav--ibai" v-if="showTabs">
 					<div class="tabsnav__item" @click="viewWhyPrimityDetail">
 						<div class="tabsnav__bar"></div>
-						<h3 class="tabsnav__title">Why Primity Bio?</h3>
+						<h3 class="tabsnav__title">Why Primity Bio</h3>
 					</div>
 					<div class="tabsnav__item" @click="viewMyExperiencesDetail">
 						<div class="tabsnav__bar"></div>
@@ -48,6 +48,14 @@
 						<div class="tabsnav__bar"></div>
 						<h3 class="tabsnav__title">In Closing</h3>
 					</div>
+					<div class="tabsnav__item" @click="viewInClosingDetail">
+						<div class="tabsnav__bar"></div>
+						<h3 class="tabsnav__title">Additional</h3>
+					</div>
+					<div class="tabsnav__item" @click="viewInClosingDetail">
+						<div class="tabsnav__bar"></div>
+						<h3 class="tabsnav__title">Another One</h3>
+					</div>
 				</nav>
 			</transition>
 
@@ -56,7 +64,7 @@
 				<div class="tabscontent" v-if="showTabContent" :class="{ 'allow-pointer-events': showTabContent }">
 					<div class="tabscontent__item" v-show="showWhyPrimity" :class="{ 'tabcontent-opaque': showWhyPrimity }">
 						<div class="box">
-							<h3 class="box__title">WhyPrimity</h3>
+							<h3 class="box__title">Why Primity Bio</h3>
 							<br />
 							<p class="tabscontent__words">
 								Dealing one of the most challenging area in the realm of science and health care is always a noble endeavour. 
